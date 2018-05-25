@@ -46,13 +46,6 @@ class Orchestra
         QVector <Percussion_Inst> array_p;
         QVector <Wind_Inst> array_w;
 };
-class Factory_Orc
-{
-    public:
-        void Create(QVector <Orchestra> &array_orc, QString name_orc, QString name_inst, QString bore);
-        void Create(QVector <Orchestra> &array_orc, QString name_orc, QString name_inst, int pitch);
-        void Create(QVector <Orchestra> &array_orc, QString name_orc, QString name_inst, int regist, int material);
-};
 struct Result
 {
     QString name;
@@ -71,10 +64,6 @@ class Data
         QVector <Result> find_m (QVector <Orchestra> array_orc, int N);
 
 };
-class Download
-{
-    public:
-        QVector <Orchestra> loading(QVector <Orchestra> array_orc);
-};
+
 
 #endif // CLASS_H

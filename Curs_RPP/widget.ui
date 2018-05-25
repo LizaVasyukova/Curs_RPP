@@ -6,24 +6,31 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>635</width>
+    <width>736</width>
     <height>431</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Оркестры</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(170, 255, 127);</string>
+  </property>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>20</y>
-     <width>611</width>
+     <y>10</y>
+     <width>721</width>
      <height>411</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+</string>
+   </property>
    <property name="currentIndex">
-    <number>4</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -32,17 +39,27 @@
     <widget class="QTableView" name="tableView">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>60</x>
        <y>50</y>
-       <width>201</width>
+       <width>191</width>
        <height>311</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
     </widget>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>80</x>
        <y>10</y>
        <width>161</width>
        <height>31</height>
@@ -55,11 +72,15 @@
     <widget class="QPushButton" name="load">
      <property name="geometry">
       <rect>
-       <x>340</x>
-       <y>330</y>
+       <x>410</x>
+       <y>50</y>
        <width>131</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+</string>
      </property>
      <property name="text">
       <string>Загрузить</string>
@@ -68,243 +89,126 @@
     <widget class="QPushButton" name="add">
      <property name="geometry">
       <rect>
-       <x>340</x>
-       <y>280</y>
-       <width>131</width>
+       <x>410</x>
+       <y>210</y>
+       <width>161</width>
        <height>41</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
      <property name="text">
-      <string>Добавить оркестр 
- (в оркестр)</string>
+      <string>Добавить оркестр </string>
      </property>
     </widget>
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>50</y>
-       <width>111</width>
-       <height>61</height>
+       <x>300</x>
+       <y>140</y>
+       <width>151</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="text">
-      <string>Название оркестра 
- (вводить с нижним 
- подчёркиванием)</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Название оркестра &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="name_orc">
      <property name="geometry">
       <rect>
-       <x>390</x>
-       <y>70</y>
+       <x>470</x>
+       <y>160</y>
        <width>131</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="save">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>90</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Сохранить</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="del">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>320</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Удалить весь оркестр&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Удалить оркестр </string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="name_orc_2">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>280</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>120</y>
-       <width>91</width>
-       <height>21</height>
+       <x>310</x>
+       <y>280</y>
+       <width>141</width>
+       <height>31</height>
       </rect>
      </property>
-     <property name="text">
-      <string>Тип инструмента</string>
-     </property>
-    </widget>
-    <widget class="QRadioButton" name="str">
-     <property name="geometry">
-      <rect>
-       <x>340</x>
-       <y>120</y>
-       <width>71</width>
-       <height>17</height>
-      </rect>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+</string>
      </property>
      <property name="text">
-      <string>Струнные</string>
-     </property>
-    </widget>
-    <widget class="QRadioButton" name="perc">
-     <property name="geometry">
-      <rect>
-       <x>430</x>
-       <y>120</y>
-       <width>71</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Ударные</string>
-     </property>
-    </widget>
-    <widget class="QRadioButton" name="wind">
-     <property name="geometry">
-      <rect>
-       <x>520</x>
-       <y>120</y>
-       <width>71</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Духовые</string>
+      <string>Название оркестра </string>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>270</x>
-       <y>160</y>
+       <x>310</x>
+       <y>170</y>
        <width>121</width>
-       <height>16</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="text">
-      <string>Название инструмента</string>
+      <string>(вводить с нижним 
+подчёркиванием)</string>
      </property>
-    </widget>
-    <widget class="QLineEdit" name="name_inst">
-     <property name="geometry">
-      <rect>
-       <x>420</x>
-       <y>160</y>
-       <width>113</width>
-       <height>20</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>280</x>
-       <y>210</y>
-       <width>101</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Длина струны, мм</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="bore">
-     <property name="geometry">
-      <rect>
-       <x>420</x>
-       <y>210</y>
-       <width>113</width>
-       <height>20</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>280</x>
-       <y>210</y>
-       <width>91</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Высота звучания</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="pitch">
-     <property name="geometry">
-      <rect>
-       <x>420</x>
-       <y>210</y>
-       <width>111</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <item>
-      <property name="text">
-       <string>Определённая</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Неопределённая</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>290</x>
-       <y>200</y>
-       <width>47</width>
-       <height>13</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Регистр</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>290</x>
-       <y>230</y>
-       <width>51</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Материал</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="regist">
-     <property name="geometry">
-      <rect>
-       <x>418</x>
-       <y>200</y>
-       <width>111</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <item>
-      <property name="text">
-       <string>Низкий</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Средний</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Высокий</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QComboBox" name="material">
-     <property name="geometry">
-      <rect>
-       <x>420</x>
-       <y>230</y>
-       <width>111</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <item>
-      <property name="text">
-       <string>Дерево</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Медь</string>
-      </property>
-     </item>
     </widget>
    </widget>
    <widget class="QWidget" name="tab_2">
@@ -314,7 +218,7 @@
     <widget class="QPushButton" name="quest1">
      <property name="geometry">
       <rect>
-       <x>230</x>
+       <x>290</x>
        <y>90</y>
        <width>131</width>
        <height>31</height>
@@ -327,9 +231,9 @@
     <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>110</x>
        <y>20</y>
-       <width>251</width>
+       <width>381</width>
        <height>61</height>
       </rect>
      </property>
@@ -345,21 +249,27 @@
     <widget class="QTableView" name="tableView_2">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>170</x>
        <y>130</y>
        <width>391</width>
        <height>241</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
     </widget>
     <widget class="QLineEdit" name="N">
      <property name="geometry">
       <rect>
-       <x>330</x>
-       <y>50</y>
+       <x>420</x>
+       <y>60</y>
        <width>81</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
     </widget>
    </widget>
@@ -370,7 +280,7 @@
     <widget class="QPushButton" name="quest2">
      <property name="geometry">
       <rect>
-       <x>220</x>
+       <x>290</x>
        <y>80</y>
        <width>131</width>
        <height>31</height>
@@ -383,24 +293,27 @@
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>50</x>
        <y>40</y>
-       <width>561</width>
+       <width>651</width>
        <height>21</height>
       </rect>
      </property>
      <property name="text">
-      <string>Найти все оркестры, в которых у музыкальных инструментов                                            высота звучания</string>
+      <string>Найти все оркестры, в которых у музыкальных инструментов                                высота звучания</string>
      </property>
     </widget>
     <widget class="QComboBox" name="pitch_2">
      <property name="geometry">
       <rect>
-       <x>360</x>
+       <x>420</x>
        <y>40</y>
        <width>111</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
      <item>
       <property name="text">
@@ -416,11 +329,14 @@
     <widget class="QTableView" name="tableView_3">
      <property name="geometry">
       <rect>
-       <x>110</x>
-       <y>140</y>
+       <x>180</x>
+       <y>120</y>
        <width>351</width>
        <height>231</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
     </widget>
    </widget>
@@ -431,8 +347,8 @@
     <widget class="QPushButton" name="quest3">
      <property name="geometry">
       <rect>
-       <x>220</x>
-       <y>90</y>
+       <x>280</x>
+       <y>80</y>
        <width>131</width>
        <height>31</height>
       </rect>
@@ -444,9 +360,9 @@
     <widget class="QLabel" name="label_11">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>60</x>
        <y>40</y>
-       <width>511</width>
+       <width>591</width>
        <height>21</height>
       </rect>
      </property>
@@ -457,11 +373,14 @@
     <widget class="QComboBox" name="regist_2">
      <property name="geometry">
       <rect>
-       <x>410</x>
+       <x>490</x>
        <y>40</y>
        <width>71</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
      <item>
       <property name="text">
@@ -482,11 +401,14 @@
     <widget class="QTableView" name="tableView_4">
      <property name="geometry">
       <rect>
-       <x>110</x>
-       <y>140</y>
+       <x>160</x>
+       <y>120</y>
        <width>361</width>
        <height>231</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
     </widget>
    </widget>
@@ -497,7 +419,7 @@
     <widget class="QPushButton" name="quest4">
      <property name="geometry">
       <rect>
-       <x>230</x>
+       <x>290</x>
        <y>80</y>
        <width>131</width>
        <height>31</height>
@@ -510,9 +432,9 @@
     <widget class="QLabel" name="label_12">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>80</x>
        <y>40</y>
-       <width>421</width>
+       <width>521</width>
        <height>16</height>
       </rect>
      </property>
@@ -523,21 +445,27 @@
     <widget class="QTableView" name="tableView_5">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>140</y>
+       <x>170</x>
+       <y>120</y>
        <width>351</width>
        <height>231</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
     </widget>
     <widget class="QComboBox" name="material_2">
      <property name="geometry">
       <rect>
-       <x>440</x>
+       <x>560</x>
        <y>40</y>
        <width>71</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
      <item>
       <property name="text">

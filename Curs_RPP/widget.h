@@ -5,6 +5,7 @@
 #include <QWidget>
 #include <QAbstractTableModel>
 #include <QVariant>
+#include <widget_ch.h>
 #include <QDebug>
 
 namespace Ui {
@@ -51,21 +52,15 @@ public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
 
+
     QVector <Orchestra> array_orc;
+    myTableModel *myModel = new myTableModel(array_orc);
     QVector <Orchestra> loading(QVector <Orchestra> array_orc);
-    void show_table(QVector <Orchestra> vec);
-    void show_table(QVector <Result> vec);
 
 private slots:
     void on_load_clicked(bool checked);
 
     void on_add_clicked(bool checked);
-
-    void on_str_clicked(bool checked);
-
-    void on_perc_clicked(bool checked);
-
-    void on_wind_clicked(bool checked);
 
     void on_quest1_clicked(bool checked);
 
@@ -75,8 +70,19 @@ private slots:
 
     void on_quest4_clicked(bool checked);
 
+    void on_save_clicked(bool checked);
+
+    void on_tableView_clicked(const QModelIndex &index);
+
+    void on_tableView_doubleClicked(const QModelIndex &index);
+
+    void on_del_clicked(bool checked);
+
+    void get_data(Orchestra orc);
+
 private:
     Ui::Widget *ui;
+
 };
 
 #endif // WIDGET_H
